@@ -1,9 +1,14 @@
 import React from 'react'
 
-const Leet_Git = () => {
+export const Leet_Git = () => {
   return (
-    <div>Leet_Git</div>
+    <div className='flex flex-col w-[50%]   space-y-6'>
+    <div className=' bg-black h-[250px] rounded-l-lg '>
+      Leet_Git
+    </div>
+    <div className=' bg-black h-[250px] rounded-l-lg'>
+      Leet_Git
+    </div>
+    </div>
   )
 }
-
-export default Leet_Git

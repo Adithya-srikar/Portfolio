@@ -18,7 +18,7 @@ export const Navbar = () => {
         <div
       className={`fixed top-4 inset-x-0 mx-auto max-w-screen-xl px-6 py-3 z-50 flex items-center font-mono transition-all duration-500 ease-in-out
         ${scrolled
-          ? 'bg-white/10 backdrop-blur-lg shadow-lg rounded-3xl border w-[40%] justify-center'
+          ? 'bg-white/90 shadow-lg rounded-3xl border w-[40%] justify-center max-md:hidden'
           : 'bg-white text-black rounded-xl w-[90%] justify-between'}`}
     >
       {!scrolled && (
