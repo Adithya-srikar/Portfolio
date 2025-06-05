@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { AlignLeftIcon, Menu, Moon, Sun } from 'lucide-react';
+import Sidebar from '../Components/Sections/sidebar';
 
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -13,19 +15,21 @@ export const Navbar = () => {
   }, []);
 
   const toggleDarkMode = () => setDarkMode(!darkMode);
+  
 
   return (
         <div
-      className={`fixed top-4 inset-x-0 mx-auto max-w-screen-xl px-6 py-3 z-50 flex items-center font-mono transition-all duration-500 ease-in-out
+      className={`fixed top-4 inset-x-0 mx-auto max-w-screen-xl px-6 py-3 z-50 flex items-center font-mono transition-[background-color,border-radius] duration-600 ease-in transition-[width] duration-700 ease-in-out
         ${scrolled
-          ? 'bg-white/90 shadow-lg rounded-3xl border w-[40%] justify-center max-md:hidden'
-          : 'bg-white text-black rounded-xl w-[90%] justify-between'}`}
+          ? 'bg-white/90  rounded-3xl w-[40%] justify-center max-md:hidden '
+          : ' text-black rounded-xl w-[90%] justify-between '}`}
     >
       {!scrolled && (
         <div className="flex items-center text-xl font-bold">
-          <a>
-            <AlignLeftIcon className="mr-10 max-md:hidden" />
+          <a onClick={() => setIsSidebarOpen(true)}>
+            <AlignLeftIcon className="mr-10 hover:text-purple-500 max-md:hidden" />
           </a>
+          <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
           <span className="text-purple-400">&lt;</span>
           <span className="text-black">Srikar.dev</span>
           <span className="text-purple-400">/&gt;</span>
