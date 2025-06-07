@@ -51,18 +51,18 @@ const Sidebar = ({ isOpen, onClose }) => {
             <div>
               <h3 className="text-gray-400 text-sm uppercase tracking-wider mb-2">Address</h3>
               <p className="text-gray-300 text-lg leading-relaxed">
-                0811 Erdman Prairie Road,<br />
-                Joaville, California 90210
+                Eluru, Andhra Pradesh,<br />
+                India
               </p>
             </div>
 
             <div>
               <h3 className="text-gray-400 text-sm uppercase tracking-wider mb-2">Social</h3>
               <div className="flex space-x-4 mb-10">
-                <a href="https://www.linkedin.com/in/adithya-srikar/" className="p-3 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors">
+                <a href="https://www.linkedin.com/in/adithya-srikar/" target='_blank' className="p-3 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors">
                   <FaLinkedinIn className="w-5 h-5 text-gray-300" />
                 </a>
-                <a href="https://github.com/Adithya-srikar" className="p-3 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors">
+                <a href="https://github.com/Adithya-srikar" target="_blank" className="p-3 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors">
                   <FaGithub className="w-5 h-5 text-gray-300" />
                 </a>
               </div>
